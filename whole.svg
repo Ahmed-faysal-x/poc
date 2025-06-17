@@ -1,8 +1,1 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E
-<svg><animate onbegin=alert(1) attributeName=x dur=1s>
-<polygon id="triangle" points="0,0 0,50 50,0" fill="#009900" stroke="#004400"/>
-<script type="text/javascript">
-
-</script>
-</svg>
+<style>.scroll-container { overflow-x: scroll; scroll-snap-type: x mandatory; display: flex; width: 300px; } .scroll-item { flex: 0 0 500px; scroll-snap-align: start; } .scroll-item:first-child { animation: sample; animation-duration: 0.1s; } @keyframes sample { 100% { scroll-snap-align: none; } }</style><x class="scroll-container" onscrollsnapchanging="alert(1)"> <xss class="scroll-item">Item 1</xss><xss class="scroll-item">Item 2</xss></xss>
