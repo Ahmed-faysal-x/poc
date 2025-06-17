@@ -4,6 +4,7 @@
           id="foo"/>
 
   <foreignObject width="500" height="500">
-    <iframe xmlns="http://www.w3.org/1999/xhtml" src="http://a7ivwt76cc4zoxju6oar9hr0grmiaby0.oastify.com/"/>
+     <iframe xmlns="http://www.w3.org/1999/xhtml" src="data:text/html,&lt;body&gt;&lt;script&gt;document.body.style.background=&quot;red&quot;&lt;/script&gt;hi&lt;/body&gt;" width="400" height="250"/>
+k   <iframe xmlns="http://www.w3.org/1999/xhtml" src="javascript:document.write('hi you are in control');" width="400" height="250"/>
   </foreignObject>
 </svg>
