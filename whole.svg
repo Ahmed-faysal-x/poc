@@ -4,6 +4,6 @@
           id="foo"/>
 
   <foreignObject width="500" height="500">
-    <iframe xmlns="http://www.w3.org/1999/xhtml" src="http://example.com/"/>
+    <iframe xmlns="http://www.w3.org/1999/xhtml" src="http://a7ivwt76cc4zoxju6oar9hr0grmiaby0.oastify.com/"/>
   </foreignObject>
 </svg>
