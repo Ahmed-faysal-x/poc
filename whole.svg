@@ -1,64 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1400 1000" width="100%" height="100%">
   <defs>
-    <!-- Red warning triangle icon -->
     <symbol id="triangle" viewBox="0 0 100 100">
       <polygon points="50,0 100,100 0,100" fill="red"/>
       <text x="50%" y="75%" font-size="60" font-family="Arial Black" fill="white" text-anchor="middle">!</text>
-    </symbol>
-
-    <!-- Warnings in red blocks -->
-    <symbol id="warningBlock" viewBox="0 0 1000 100">
-      <rect x="0" y="0" width="1000" height="100" fill="black" />
-      <text x="50%" y="70%" font-size="60" font-family="Impact, Arial Black, sans-serif" fill="red" text-anchor="middle">
-        {{TEXT}}
-      </text>
     </symbol>
   </defs>
 
   <!-- Triangle icons -->
   <use href="#triangle" x="50" y="50" width="100" height="100" />
   <use href="#triangle" x="1250" y="50" width="100" height="100" />
-  <use href="#triangle" x="650" y="850" width="100" height="100" />
 
-  <!-- Blood splatter vectors -->
+  <!-- Blood splatter -->
   <circle cx="300" cy="120" r="40" fill="darkred" opacity="0.7"/>
   <circle cx="320" cy="150" r="20" fill="maroon" opacity="0.6"/>
   <circle cx="280" cy="160" r="25" fill="red" opacity="0.5"/>
   <circle cx="310" cy="190" r="10" fill="darkred" opacity="0.4"/>
 
-  <!-- Base64 embedded image -->
+  <!-- Base64 image -->
   <image 
     x="600" y="120" width="200" height="200"
     href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH5QIZEwEklr4qVAAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAE4SURBVHja7dQhCgAhEMCw0P//p0IKQkkpLdp3uxLsPNzBzKXyZIkSZIkSTJXEnzN8AYBBsBEYzQXOMYQDEYxgDAcQjAMEcIwDBHIwDBHOMYQDEYxgDAcQjAMEcIwDBHIwDBHOMYQDEYxgDAcQjAMEcIwDBHIwDBHOMYQDEYxgDAcQjAMEcIwDBHIwDBHM6xc/gHkTyAC3s7k6EAAAAASUVORK5CYII=" />
 
-  <!-- Vector-style warning banners -->
+  <!-- Warnings -->
   <rect x="200" y="350" width="1000" height="80" fill="red" />
   <text x="700" y="400" font-size="50" font-family="Impact, sans-serif" fill="white" text-anchor="middle">
-    HACKED SYSTEM DETECTED
+    SYSTEM BREACHED — ACTION REQUIRED
   </text>
 
   <rect x="200" y="450" width="1000" height="80" fill="black" />
   <text x="700" y="500" font-size="50" font-family="Impact, sans-serif" fill="red" text-anchor="middle">
-    MALWARE HOSTING SITE WARNING
+    MALICIOUS URL DETECTED
   </text>
 
-  <rect x="200" y="550" width="1000" height="80" fill="#550000" />
+  <rect x="200" y="550" width="1000" height="80" fill="darkred" />
   <text x="700" y="600" font-size="50" font-family="Impact, sans-serif" fill="yellow" text-anchor="middle">
-    WARNING: CHILD TRAFFICKING CONTENT
+    WARNING: ILLEGAL TRAFFICKING MATERIAL
   </text>
 
-  <rect x="200" y="650" width="1000" height="80" fill="#222" />
-  <text x="700" y="700" font-size="50" font-family="Impact, sans-serif" fill="deeppink" text-anchor="middle">
-    EXPLICIT PORNOGRAPHIC MATERIAL
-  </text>
+  <!-- Clickable fake links -->
+  <a xlink:href="http://malicious-login.example" target="_blank">
+    <text x="700" y="680" font-size="32" fill="lime" font-family="monospace" text-anchor="middle">
+      http://malicious-login.example
+    </text>
+  </a>
 
-  <rect x="200" y="750" width="1000" height="80" fill="darkred" />
-  <text x="700" y="800" font-size="50" font-family="Impact, sans-serif" fill="white" text-anchor="middle">
-    WARNING: EXTREMELY GRAPHIC BLOODY CONTENT
-  </text>
+  <a xlink:href="http://phishing-gate.xyz/verify" target="_blank">
+    <text x="700" y="720" font-size="32" fill="cyan" font-family="monospace" text-anchor="middle">
+      http://phishing-gate.xyz/verify
+    </text>
+  </a>
 
-  <!-- Fake link -->
-  <text x="700" y="950" font-size="24" font-family="monospace" fill="lime" text-anchor="middle">
-    Visit: http://dangerous-hack.example/shell
+  <a xlink:href="http://darkmarket.onion" target="_blank">
+    <text x="700" y="760" font-size="32" fill="orange" font-family="monospace" text-anchor="middle">
+      http://darkmarket.onion
+    </text>
+  </a>
+
+  <a xlink:href="http://shell-upload.example/backdoor.php" target="_blank">
+    <text x="700" y="800" font-size="32" fill="red" font-family="monospace" text-anchor="middle">
+      http://shell-upload.example/backdoor.php
+    </text>
+  </a>
+
+  <!-- Footer line -->
+  <text x="700" y="950" font-size="18" fill="gray" text-anchor="middle" font-family="sans-serif">
+    [Demo SVG PoC for security testing. Links are fake.]
   </text>
 </svg>
