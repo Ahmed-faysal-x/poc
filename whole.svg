@@ -1,29 +1,60 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     xmlns:html="http://www.w3.org/1999/xhtml"
-     width="100%" height="100%">
-  <foreignObject width="100%" height="100%">
-    <html:html xmlns="http://www.w3.org/1999/xhtml">
-      <html:head>
-        <html:title>SVG Webpage</html:title>
-        <html:style type="text/css">
-          body {
-            font-family: sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 2em;
-          }
-          h1 {
-            color: #007acc;
-          }
-        </html:style>
-      </html:head>
-      <html:body>
-        <h1>Hello from SVG!</h1>
-        <p>This is an entire HTML page inside an SVG file.</p>
-        <p>You can style it and even include JS (with limitations).</p>
-      </html:body>
-    </html:html>
-  </foreignObject>
+     width="100%" height="100%"
+     viewBox="0 0 1000 1000"
+     preserveAspectRatio="xMidYMid meet">
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#1b1b1b"/>
+
+  <!-- Hacked Warning -->
+  <text x="50" y="120"
+        font-size="72"
+        font-family="monospace"
+        fill="#FF0000"
+        font-weight="bold">
+    ⚠ HACKED SYSTEM ⚠
+  </text>
+
+  <!-- Offensive-looking paragraph (safe example for demonstration) -->
+  <text x="50" y="200"
+        font-size="28"
+        font-family="Arial"
+        fill="#ffffff">
+    Your system security has been compromised.
+  </text>
+  <text x="50" y="240"
+        font-size="28"
+        font-family="Arial"
+        fill="#ffffff">
+    All your files and credentials are exposed.
+  </text>
+  <text x="50" y="280"
+        font-size="28"
+        font-family="Arial"
+        fill="#ff6600">
+    This is a proof of concept — no real harm done.
+  </text>
+
+  <!-- Table-like layout -->
+  <text x="50" y="360" font-size="24" font-family="Courier New" fill="#00ffcc">+------------+--------------------+</text>
+  <text x="50" y="390" font-size="24" font-family="Courier New" fill="#00ffcc">| Username   | admin              |</text>
+  <text x="50" y="420" font-size="24" font-family="Courier New" fill="#00ffcc">| Password   | p@ssw0rd123         |</text>
+  <text x="50" y="450" font-size="24" font-family="Courier New" fill="#00ffcc">+------------+--------------------+</text>
+
+  <!-- Vector-encoded "image" (e.g., skull icon path) -->
+  <path d="M500,600
+           c-80,0 -120,60 -120,120
+           c0,50 40,100 120,100
+           c80,0 120,-50 120,-100
+           c0,-60 -40,-120 -120,-120
+           z
+           M470,640 a20,20 0 1,0 0.1,0
+           M530,640 a20,20 0 1,0 0.1,0
+           M470,700
+           c20,20 60,20 80,0" 
+        fill="#ffffff"
+        stroke="#ff0000"
+        stroke-width="4"/>
+
 </svg>
