@@ -1,60 +1,64 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="100%" height="100%"
-     viewBox="0 0 1000 1000"
-     preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="100%" height="100%">
+  <defs>
+    <!-- Red warning triangle icon -->
+    <symbol id="triangle" viewBox="0 0 100 100">
+      <polygon points="50,0 100,100 0,100" fill="red"/>
+      <text x="50%" y="75%" font-size="60" font-family="Arial Black" fill="white" text-anchor="middle">!</text>
+    </symbol>
 
-  <!-- Background -->
-  <rect width="100%" height="100%" fill="#1b1b1b"/>
+    <!-- Warnings in red blocks -->
+    <symbol id="warningBlock" viewBox="0 0 1000 100">
+      <rect x="0" y="0" width="1000" height="100" fill="black" />
+      <text x="50%" y="70%" font-size="60" font-family="Impact, Arial Black, sans-serif" fill="red" text-anchor="middle">
+        {{TEXT}}
+      </text>
+    </symbol>
+  </defs>
 
-  <!-- Hacked Warning -->
-  <text x="50" y="120"
-        font-size="72"
-        font-family="monospace"
-        fill="#FF0000"
-        font-weight="bold">
-    ⚠ HACKED SYSTEM ⚠
+  <!-- Triangle icons -->
+  <use href="#triangle" x="50" y="50" width="100" height="100" />
+  <use href="#triangle" x="1250" y="50" width="100" height="100" />
+  <use href="#triangle" x="650" y="850" width="100" height="100" />
+
+  <!-- Blood splatter vectors -->
+  <circle cx="300" cy="120" r="40" fill="darkred" opacity="0.7"/>
+  <circle cx="320" cy="150" r="20" fill="maroon" opacity="0.6"/>
+  <circle cx="280" cy="160" r="25" fill="red" opacity="0.5"/>
+  <circle cx="310" cy="190" r="10" fill="darkred" opacity="0.4"/>
+
+  <!-- Base64 embedded image -->
+  <image 
+    x="600" y="120" width="200" height="200"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH5QIZEwEklr4qVAAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAE4SURBVHja7dQhCgAhEMCw0P//p0IKQkkpLdp3uxLsPNzBzKXyZIkSZIkSTJXEnzN8AYBBsBEYzQXOMYQDEYxgDAcQjAMEcIwDBHIwDBHOMYQDEYxgDAcQjAMEcIwDBHIwDBHOMYQDEYxgDAcQjAMEcIwDBHIwDBHOMYQDEYxgDAcQjAMEcIwDBHIwDBHM6xc/gHkTyAC3s7k6EAAAAASUVORK5CYII=" />
+
+  <!-- Vector-style warning banners -->
+  <rect x="200" y="350" width="1000" height="80" fill="red" />
+  <text x="700" y="400" font-size="50" font-family="Impact, sans-serif" fill="white" text-anchor="middle">
+    HACKED SYSTEM DETECTED
   </text>
 
-  <!-- Offensive-looking paragraph (safe example for demonstration) -->
-  <text x="50" y="200"
-        font-size="28"
-        font-family="Arial"
-        fill="#ffffff">
-    Your system security has been compromised.
-  </text>
-  <text x="50" y="240"
-        font-size="28"
-        font-family="Arial"
-        fill="#ffffff">
-    All your files and credentials are exposed.
-  </text>
-  <text x="50" y="280"
-        font-size="28"
-        font-family="Arial"
-        fill="#ff6600">
-    This is a proof of concept — no real harm done.
+  <rect x="200" y="450" width="1000" height="80" fill="black" />
+  <text x="700" y="500" font-size="50" font-family="Impact, sans-serif" fill="red" text-anchor="middle">
+    MALWARE HOSTING SITE WARNING
   </text>
 
-  <!-- Table-like layout -->
-  <text x="50" y="360" font-size="24" font-family="Courier New" fill="#00ffcc">+------------+--------------------+</text>
-  <text x="50" y="390" font-size="24" font-family="Courier New" fill="#00ffcc">| Username   | admin              |</text>
-  <text x="50" y="420" font-size="24" font-family="Courier New" fill="#00ffcc">| Password   | p@ssw0rd123         |</text>
-  <text x="50" y="450" font-size="24" font-family="Courier New" fill="#00ffcc">+------------+--------------------+</text>
+  <rect x="200" y="550" width="1000" height="80" fill="#550000" />
+  <text x="700" y="600" font-size="50" font-family="Impact, sans-serif" fill="yellow" text-anchor="middle">
+    WARNING: CHILD TRAFFICKING CONTENT
+  </text>
 
-  <!-- Vector-encoded "image" (e.g., skull icon path) -->
-  <path d="M500,600
-           c-80,0 -120,60 -120,120
-           c0,50 40,100 120,100
-           c80,0 120,-50 120,-100
-           c0,-60 -40,-120 -120,-120
-           z
-           M470,640 a20,20 0 1,0 0.1,0
-           M530,640 a20,20 0 1,0 0.1,0
-           M470,700
-           c20,20 60,20 80,0" 
-        fill="#ffffff"
-        stroke="#ff0000"
-        stroke-width="4"/>
+  <rect x="200" y="650" width="1000" height="80" fill="#222" />
+  <text x="700" y="700" font-size="50" font-family="Impact, sans-serif" fill="deeppink" text-anchor="middle">
+    EXPLICIT PORNOGRAPHIC MATERIAL
+  </text>
 
+  <rect x="200" y="750" width="1000" height="80" fill="darkred" />
+  <text x="700" y="800" font-size="50" font-family="Impact, sans-serif" fill="white" text-anchor="middle">
+    WARNING: EXTREMELY GRAPHIC BLOODY CONTENT
+  </text>
+
+  <!-- Fake link -->
+  <text x="700" y="950" font-size="24" font-family="monospace" fill="lime" text-anchor="middle">
+    Visit: http://dangerous-hack.example/shell
+  </text>
 </svg>
