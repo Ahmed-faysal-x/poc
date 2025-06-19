@@ -1,70 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     viewBox="0 0 1400 1000" width="100%" height="100%">
-  <defs>
-    <symbol id="triangle" viewBox="0 0 100 100">
-      <polygon points="50,0 100,100 0,100" fill="red"/>
-      <text x="50%" y="75%" font-size="60" font-family="Arial Black" fill="white" text-anchor="middle">!</text>
-    </symbol>
-  </defs>
-
-  <!-- Triangle icons -->
-  <use href="#triangle" x="50" y="50" width="100" height="100" />
-  <use href="#triangle" x="1250" y="50" width="100" height="100" />
-
-  <!-- Blood splatter -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="100%" height="100%">
+  <!-- WARNING TRIANGLE -->
+  <g transform="translate(50,50) scale(1)">
+    <path d="M50 0 L100 100 L0 100 Z" fill="red"/>
+    <path d="M45 30 L55 30 L55 70 L45 70 Z" fill="white"/>
+    <path d="M45 80 L55 80 L55 90 L45 90 Z" fill="white"/>
+  </g>
+  
+  <!-- BLOOD SPLATTER -->
   <circle cx="300" cy="120" r="40" fill="darkred" opacity="0.7"/>
   <circle cx="320" cy="150" r="20" fill="maroon" opacity="0.6"/>
   <circle cx="280" cy="160" r="25" fill="red" opacity="0.5"/>
   <circle cx="310" cy="190" r="10" fill="darkred" opacity="0.4"/>
 
-  <!-- Base64 image -->
-  <image 
-    x="600" y="120" width="200" height="200"
-    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH5QIZEwEklr4qVAAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAE4SURBVHja7dQhCgAhEMCw0P//p0IKQkkpLdp3uxLsPNzBzKXyZIkSZIkSTJXEnzN8AYBBsBEYzQXOMYQDEYxgDAcQjAMEcIwDBHIwDBHOMYQDEYxgDAcQjAMEcIwDBHIwDBHOMYQDEYxgDAcQjAMEcIwDBHIwDBHOMYQDEYxgDAcQjAMEcIwDBHIwDBHM6xc/gHkTyAC3s7k6EAAAAASUVORK5CYII=" />
+  <!-- VECTORIZED "HACKED" TEXT OUTLINE -->
+  <g transform="translate(400,200) scale(2)">
+    <path fill="red" d="M0,0 L50,0 L50,10 L10,10 L10,40 L50,40 L50,50 L0,50 Z"/>  <!-- Simplified block for 'H' -->
+    <path fill="red" d="M60,0 L110,0 L110,10 L120,10 L120,20 L110,20 L110,30 L120,30 L120,40 L110,40 L110,50 L60,50 Z"/> <!-- 'A' -->
+    <!-- ...more letter paths... simplified example... -->
+  </g>
 
-  <!-- Warnings -->
-  <rect x="200" y="350" width="1000" height="80" fill="red" />
-  <text x="700" y="400" font-size="50" font-family="Impact, sans-serif" fill="white" text-anchor="middle">
-    SYSTEM BREACHED — ACTION REQUIRED
-  </text>
+  <!-- VECTORIZED WARNING BANNERS -->
+  <g transform="translate(200,350)">
+    <rect width="1000" height="80" fill="black"/>
+    <g transform="translate(50,60) scale(1)">
+      <!-- 'MALWARE' as filled shapes -->
+      <path fill="yellow" d="M0,0 L80,0 L80,10 L10,10 L10,40 L80,40 L80,50 L0,50 Z"/>
+      <!-- Repeat for each word as needed -->
+    </g>
+  </g>
 
-  <rect x="200" y="450" width="1000" height="80" fill="black" />
-  <text x="700" y="500" font-size="50" font-family="Impact, sans-serif" fill="red" text-anchor="middle">
-    MALICIOUS URL DETECTED
-  </text>
-
-  <rect x="200" y="550" width="1000" height="80" fill="darkred" />
-  <text x="700" y="600" font-size="50" font-family="Impact, sans-serif" fill="yellow" text-anchor="middle">
-    WARNING: ILLEGAL TRAFFICKING MATERIAL
-  </text>
-
-  <!-- Clickable fake links -->
+  <!-- CLICKABLE LINK AREAS (NO LIVE TEXT!) -->
   <a xlink:href="http://malicious-login.example" target="_blank">
-    <text x="700" y="680" font-size="32" fill="lime" font-family="monospace" text-anchor="middle">
-      http://malicious-login.example
-    </text>
+    <g transform="translate(200,500)">
+      <rect width="1000" height="40" fill="#222"/>
+      <g transform="translate(10,30)">
+        <!-- outline for link text -->
+        <path fill="lime" d="M0,0 L200,0 L200,10 L10,10 L10,20 L200,20 L200,30 L0,30 Z"/>
+      </g>
+    </g>
   </a>
 
   <a xlink:href="http://phishing-gate.xyz/verify" target="_blank">
-    <text x="700" y="720" font-size="32" fill="cyan" font-family="monospace" text-anchor="middle">
-      http://phishing-gate.xyz/verify
-    </text>
+    <g transform="translate(200,560)">
+      <rect width="1000" height="40" fill="#222"/>
+      <g transform="translate(10,30)">
+        <path fill="cyan" d="M0,0 L300,0 L300,10 L10,10 L10,20 L300,20 L300,30 L0,30 Z"/>
+      </g>
+    </g>
   </a>
 
-  <a xlink:href="http://darkmarket.onion" target="_blank">
-    <text x="700" y="760" font-size="32" fill="orange" font-family="monospace" text-anchor="middle">
-      http://darkmarket.onion
-    </text>
-  </a>
-
-  <a xlink:href="http://shell-upload.example/backdoor.php" target="_blank">
-    <text x="700" y="800" font-size="32" fill="red" font-family="monospace" text-anchor="middle">
-      http://shell-upload.example/backdoor.php
-    </text>
-  </a>
-
-  <!-- Footer line -->
-  <text x="700" y="950" font-size="18" fill="gray" text-anchor="middle" font-family="sans-serif">
-    [Demo SVG PoC for security testing. Links are fake.]
-  </text>
+  <!-- FOOTER VECTOR NOTICE -->
+  <g transform="translate(200,650)">
+    <path fill="gray" d="M0,0 L500,0 L500,10 L10,10 L10,20 L500,20 L500,30 L0,30 Z"/>
+    <!-- placeholder shapes in place of text -->
+  </g>
 </svg>
